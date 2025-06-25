@@ -52,8 +52,16 @@ export function Settings() {
         body: JSON.stringify({ apiKey: settings.fmpApiKey }),
       });
       
-      setConnectionStatus(response.ok ? 'success' : 'error');
+      const data = await response.json();
+      
+      if (response.ok && data.success) {
+        setConnectionStatus('success');
+      } else {
+        console.error('API test failed:', data.error);
+        setConnectionStatus('error');
+      }
     } catch (error) {
+      console.error('Error testing connection:', error);
       setConnectionStatus('error');
     }
   };
