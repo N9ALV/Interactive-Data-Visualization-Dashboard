@@ -1,0 +1,416 @@
+{
+  "portfolio_instruments": {
+    "NOBL": {
+      "ticker": "NOBL",
+      "fund_name": "ProShares S&P 500 Dividend Aristocrats ETF",
+      "category": "Dividend-focused ETF",
+      "underlying_assets": "S&P 500 Dividend Aristocrats Index - large-cap U.S. companies with 25+ consecutive years of dividend increases",
+      "expense_ratio": "0.35%",
+      "AUM": "Not specified in research",
+      "yield": "Not specified in research",
+      "inception": "Not specified in research",
+      "key_characteristics": [
+        "Tracks companies with 25+ consecutive years of dividend increases",
+        "Most holdings have 40+ year dividend growth history",
+        "Focus on high-quality, dividend-growing companies",
+        "Competitive expense ratio for specialized dividend ETF"
+      ],
+      "common_metrics_available": [
+        "expense_ratio",
+        "dividend_yield",
+        "total_return",
+        "holdings_data",
+        "sector_allocation"
+      ]
+    },
+    "XYLD": {
+      "ticker": "XYLD",
+      "fund_name": "Global X S&P 500 Covered Call ETF",
+      "category": "Covered Call Strategy ETF",
+      "underlying_assets": "S&P 500 stocks with covered call overlay - tracks Cboe S&P 500 BuyWrite Index",
+      "expense_ratio": "0.60%",
+      "AUM": "$3.03 billion",
+      "yield": "14.74% (trailing 12-month distribution yield)",
+      "inception": "June 21, 2013",
+      "key_characteristics": [
+        "Employs covered call/buy-write strategy",
+        "Monthly distributions",
+        "Higher income potential with capped upside",
+        "Top holdings: MSFT (7.25%), NVDA (7.20%), AAPL (6.17%)",
+        "Distribution may include return of capital"
+      ],
+      "common_metrics_available": [
+        "holdings_data",
+        "distribution_yield",
+        "covered_call_premiums",
+        "sector_allocation",
+        "monthly_distributions"
+      ]
+    },
+    "IDU": {
+      "ticker": "IDU",
+      "fund_name": "iShares U.S. Utilities ETF",
+      "category": "Sector ETF - Utilities",
+      "underlying_assets": "Russell 1000 Utilities RIC 22.5/45 Capped Index - U.S. utility companies",
+      "expense_ratio": "0.39%",
+      "AUM": "$1.47 billion",
+      "yield": "2.35% (dividend yield)",
+      "inception": "June 12, 2000",
+      "key_characteristics": [
+        "43 holdings in utilities sector",
+        "Quarterly distributions",
+        "Beta of 0.64 (lower volatility vs market)",
+        "Top holdings include NextEra Energy, Southern Company",
+        "Defensive investment characteristics"
+      ],
+      "common_metrics_available": [
+        "sector_exposure",
+        "dividend_yield",
+        "beta",
+        "holdings_data",
+        "quarterly_distributions"
+      ]
+    },
+    "SCHP": {
+      "ticker": "SCHP",
+      "fund_name": "Schwab U.S. TIPS ETF",
+      "category": "Inflation-Protected Bonds ETF",
+      "underlying_assets": "Bloomberg US Treasury Inflation-Protected Notes (TIPS) index",
+      "expense_ratio": "0.03%",
+      "AUM": "$13.19 billion",
+      "yield": "3.11% (dividend yield)",
+      "inception": "August 5, 2010",
+      "key_characteristics": [
+        "56 holdings of U.S. Treasury inflation-protected securities",
+        "Effective duration of 6.8 years",
+        "Quarterly dividends",
+        "2-for-1 share split in October 2024",
+        "Very low expense ratio"
+      ],
+      "common_metrics_available": [
+        "inflation_adjustment",
+        "effective_duration",
+        "real_yield",
+        "tips_data",
+        "quarterly_distributions"
+      ]
+    },
+    "IEI": {
+      "ticker": "IEI",
+      "fund_name": "iShares 3-7 Year Treasury Bond ETF",
+      "category": "Intermediate Government Bonds ETF",
+      "underlying_assets": "ICE BofA US Treasury (3-7 Y) index - U.S. Treasury bonds with 3-7 year maturities",
+      "expense_ratio": "0.15%",
+      "AUM": "$15.39 billion",
+      "yield": "3.90% (30-day SEC yield)",
+      "inception": "January 5, 2007",
+      "key_characteristics": [
+        "107 bond holdings",
+        "Weighted average maturity of 4.71 years",
+        "Effective duration of 4.27 years",
+        "Monthly distributions",
+        "5-star Morningstar rating",
+        "99.73% U.S. Treasury securities"
+      ],
+      "common_metrics_available": [
+        "duration",
+        "yield_to_maturity",
+        "credit_quality",
+        "monthly_distributions",
+        "treasury_data"
+      ]
+    },
+    "DBMF": {
+      "ticker": "DBMF",
+      "fund_name": "iMGP DBi Managed Futures Strategy ETF",
+      "category": "Managed Futures/Alternative Strategy ETF",
+      "underlying_assets": "Derivatives, treasury bills, and systematic trend-following strategies replicating CTA hedge funds",
+      "expense_ratio": "0.85%",
+      "AUM": "$1.19 billion",
+      "yield": "5.92% (dividend yield)",
+      "inception": "May 8, 2019",
+      "key_characteristics": [
+        "Actively managed with systematic trend-following",
+        "Beta of -0.17 (low correlation with equity markets)",
+        "20 holdings including derivatives and cash offsets",
+        "Quarterly distributions",
+        "Global macro alternative strategy",
+        "76.54% cash offsets for shorts & derivatives"
+      ],
+      "common_metrics_available": [
+        "derivatives_exposure",
+        "trend_following_metrics",
+        "correlation_data",
+        "alternative_strategy_performance",
+        "quarterly_distributions"
+      ]
+    },
+    "BTAL": {
+      "ticker": "BTAL",
+      "fund_name": "AGF U.S. Market Neutral Anti-Beta Fund",
+      "category": "Market Neutral/Alternative Strategy ETF",
+      "underlying_assets": "Long low-beta U.S. stocks, short high-beta U.S. stocks",
+      "expense_ratio": "1.43% to 1.58%",
+      "AUM": "Not specified in research",
+      "yield": "Not specified in research",
+      "inception": "Not specified in research",
+      "key_characteristics": [
+        "Market-neutral strategy",
+        "Long/short equity approach",
+        "Anti-beta positioning",
+        "Higher expense ratio due to active management",
+        "Designed for downside protection"
+      ],
+      "common_metrics_available": [
+        "long_short_exposure",
+        "beta_metrics",
+        "market_neutral_performance",
+        "hedge_ratios"
+      ]
+    },
+    "MERFX": {
+      "ticker": "MERFX",
+      "fund_name": "The Merger Fund",
+      "category": "Merger Arbitrage Mutual Fund",
+      "underlying_assets": "Companies involved in announced mergers, acquisitions, tender offers, leveraged buyouts, spin-offs",
+      "expense_ratio": "Not specified in research",
+      "AUM": "$2.35 billion",
+      "yield": "2.93% (dividend yield)",
+      "inception": "January 31, 1989",
+      "key_characteristics": [
+        "Specializes in merger arbitrage strategies",
+        "49 long positions, 13 short positions",
+        "Beta of 0.08 (very low market correlation)",
+        "95.86% invested, 28.69% short positions",
+        "Top holdings: Hess Corp, Endeavor Group Holdings",
+        "Over 40 years of experience, 98% completion rate"
+      ],
+      "common_metrics_available": [
+        "merger_arbitrage_metrics",
+        "event_driven_performance",
+        "completion_rates",
+        "spread_analysis",
+        "risk_arbitrage_data"
+      ]
+    },
+    "VNQ": {
+      "ticker": "VNQ",
+      "fund_name": "Vanguard Real Estate ETF",
+      "category": "Real Estate Investment Trusts (REITs) ETF",
+      "underlying_assets": "MSCI US IMI/Real Estate 25-50 index - U.S. publicly traded equity REITs",
+      "expense_ratio": "0.12% to 0.13%",
+      "AUM": "$87.0 billion",
+      "yield": "3.97% (trailing 12-month dividend yield)",
+      "inception": "September 23, 2004",
+      "key_characteristics": [
+        "Diversified REIT exposure across sectors",
+        "Top holdings: Prologis, American Tower, Welltower",
+        "Sector allocation: Retail (13.3%), Healthcare (13.1%), Telecom Tower (11.6%)",
+        "Standard deviation of 29.0% (high volatility)",
+        "7.75% annualized return since inception"
+      ],
+      "common_metrics_available": [
+        "reit_sector_allocation",
+        "property_type_exposure",
+        "dividend_yield",
+        "reit_fundamentals",
+        "real_estate_metrics"
+      ]
+    },
+    "UTF": {
+      "ticker": "UTF",
+      "fund_name": "Cohen & Steers Infrastructure Fund",
+      "category": "Infrastructure Closed-End Fund",
+      "underlying_assets": "Infrastructure companies - utilities, pipelines, toll roads, airports, railroads, ports, telecommunications",
+      "expense_ratio": "Not specified in research",
+      "AUM": "$2.4 billion",
+      "yield": "7.06% (monthly distribution rate)",
+      "inception": "March 30, 2004",
+      "key_characteristics": [
+        "Closed-end fund structure",
+        "285 securities in portfolio",
+        "Monthly distributions",
+        "28.05% leverage ($950M total debt)",
+        "Trading at 4.48% premium to NAV",
+        "80%+ investment in infrastructure securities",
+        "Geographic exposure: 46.72% U.S., diversified globally"
+      ],
+      "common_metrics_available": [
+        "infrastructure_sector_allocation",
+        "geographic_exposure",
+        "leverage_metrics",
+        "premium_discount_to_nav",
+        "monthly_distributions"
+      ]
+    },
+    "SGOV": {
+      "ticker": "SGOV",
+      "fund_name": "iShares 0-3 Month Treasury Bond ETF",
+      "category": "Ultrashort Treasury ETF",
+      "underlying_assets": "ICE 0-3 Month US Treasury Securities Index - U.S. Treasury bills with ≤3 months maturity",
+      "expense_ratio": "0.09%",
+      "AUM": "$49.43 billion",
+      "yield": "4.62% (dividend yield)",
+      "inception": "May 26, 2020",
+      "key_characteristics": [
+        "25 U.S. Treasury securities holdings",
+        "Very low risk, high liquidity",
+        "Monthly dividend payments",
+        "Cash equivalent/money market alternative",
+        "Beta close to zero",
+        "Safe haven during market volatility"
+      ],
+      "common_metrics_available": [
+        "treasury_bill_data",
+        "short_term_rates",
+        "liquidity_metrics",
+        "cash_equivalent_performance",
+        "monthly_distributions"
+      ]
+    }
+  },
+  "financial_modeling_prep_api": {
+    "description": "Financial Modeling Prep provides comprehensive financial data API with real-time stock prices, financial statements, and ETF/mutual fund data",
+    "authentication": "API key required - append ?apikey=YOUR_API_KEY to every request",
+    "data_formats": ["JSON (primary)", "CSV (available for most endpoints)"],
+    "etf_endpoints": [
+      {
+        "name": "ETF Holdings",
+        "endpoint": "/api/v3/etf-holdings/{ETF_SYMBOL}",
+        "description": "Detailed holdings of a specific ETF including constituent stocks, shares held, and weight percentages",
+        "example": "https://financialmodelingprep.com/api/v3/etf-holdings/SPY?apikey=YOUR_API_KEY"
+      },
+      {
+        "name": "ETF List",
+        "endpoint": "/api/v3/etf/list",
+        "description": "Find symbols for any ETF, including Name, Symbol, Exchange, and Price",
+        "example": "https://financialmodelingprep.com/api/v3/etf/list?apikey=YOUR_API_KEY"
+      },
+      {
+        "name": "ETF Info",
+        "endpoint": "/stable/etf/info",
+        "description": "ETF general information including expense ratio, assets under management, sector allocations",
+        "example": "https://financialmodelingprep.com/stable/etf/info?symbol=SPY&apikey=YOUR_API_KEY"
+      }
+    ],
+    "mutual_fund_endpoints": [
+      {
+        "name": "Mutual Fund Disclosures",
+        "endpoint": "/stable/funds/disclosure",
+        "description": "Detailed holdings and disclosure data for mutual funds and ETFs by quarter and year",
+        "parameters": ["symbol", "year", "quarter"],
+        "example": "https://financialmodelingprep.com/stable/funds/disclosure?symbol=VWO&year=2023&quarter=4&apikey=YOUR_API_KEY"
+      },
+      {
+        "name": "Fund Country Allocation",
+        "endpoint": "/stable/funds/country-allocation",
+        "description": "Geographic distribution of assets within funds",
+        "example": "https://financialmodelingprep.com/stable/funds/country-allocation?symbol=VWO&apikey=YOUR_API_KEY"
+      },
+      {
+        "name": "Fund Asset Exposure",
+        "endpoint": "/stable/funds/asset-exposure",
+        "description": "Specific stock holdings within ETFs and mutual funds",
+        "example": "https://financialmodelingprep.com/stable/funds/asset-exposure?symbol=VWO&apikey=YOUR_API_KEY"
+      }
+    ],
+    "general_endpoints": [
+      {
+        "name": "Company Profile",
+        "endpoint": "/api/v3/profile/{SYMBOL}",
+        "description": "Comprehensive company overview including price, beta, market cap, description",
+        "example": "https://financialmodelingprep.com/api/v3/profile/AAPL?apikey=YOUR_API_KEY"
+      },
+      {
+        "name": "Quote",
+        "endpoint": "/api/v3/quote/{SYMBOL}",
+        "description": "Real-time stock quotes with bid/ask prices, volume, last trade price",
+        "example": "https://financialmodelingprep.com/api/v3/quote/AAPL?apikey=YOUR_API_KEY"
+      },
+      {
+        "name": "Income Statement",
+        "endpoint": "/api/v3/income-statement/{SYMBOL}",
+        "description": "Annual and quarterly income statement data",
+        "parameters": ["period=annual or quarterly"],
+        "example": "https://financialmodelingprep.com/api/v3/income-statement/AAPL?period=annual&apikey=YOUR_API_KEY"
+      },
+      {
+        "name": "Balance Sheet",
+        "endpoint": "/api/v3/balance-sheet-statement/{SYMBOL}",
+        "description": "Balance sheet data showing assets, liabilities, shareholder equity",
+        "example": "https://financialmodelingprep.com/api/v3/balance-sheet-statement/AAPL?period=annual&apikey=YOUR_API_KEY"
+      },
+      {
+        "name": "Cash Flow Statement",
+        "endpoint": "/api/v3/cash-flow-statement/{SYMBOL}",
+        "description": "Cash flow data categorized into Operating, Investing, and Financing",
+        "example": "https://financialmodelingprep.com/api/v3/cash-flow-statement/AAPL?period=annual&apikey=YOUR_API_KEY"
+      }
+    ],
+    "data_format_examples": {
+      "json_response_structure": {
+        "description": "Primary format - hierarchical key-value pairs, may include nested objects/arrays",
+        "example": {
+          "date": "2024-01-28",
+          "symbol": "NVDA",
+          "revenue": 60922000000,
+          "costOfRevenue": 16621000000,
+          "grossProfit": 44301000000,
+          "netIncome": 29760000000,
+          "eps": 1.21,
+          "link": "https://sec.gov/Archives/edgar/data/1045810/000104581024000029/0001045810-24-000029-index.htm"
+        }
+      },
+      "csv_format": {
+        "description": "Flat format suitable for spreadsheet analysis - rows as records, columns as fields",
+        "note": "Available for most endpoints by modifying request format"
+      },
+      "nested_data_handling": {
+        "description": "Some responses contain nested objects requiring flattening for analysis",
+        "recommendation": "Use json_normalize() in pandas or custom flattening functions"
+      }
+    },
+    "rate_limits_and_access": {
+      "free_tier": "Available with registration",
+      "premium_tiers": "Higher request limits and additional data",
+      "authentication_method": "API key in query parameters",
+      "base_url": "https://financialmodelingprep.com"
+    },
+    "best_practices": [
+      "Validate JSON responses for completeness before processing",
+      "Use flattening techniques for nested JSON structures",
+      "Respect rate limits and terms of service",
+      "Cache frequently accessed data to minimize API calls",
+      "Handle API errors gracefully with proper error checking"
+    ]
+  },
+  "research_summary": {
+    "total_instruments_researched": 11,
+    "categories_covered": [
+      "Dividend-focused ETFs",
+      "Covered Call Strategy ETFs", 
+      "Sector ETFs (Utilities)",
+      "Inflation-Protected Bonds",
+      "Government Bonds",
+      "Managed Futures/Alternative Strategies",
+      "Market Neutral Strategies",
+      "Merger Arbitrage Mutual Funds",
+      "Real Estate Investment Trusts (REITs)",
+      "Infrastructure Closed-End Funds",
+      "Ultrashort Treasury ETFs"
+    ],
+    "api_coverage": {
+      "etf_data_available": "Yes - comprehensive holdings, performance, and structural data",
+      "mutual_fund_data_available": "Yes - disclosure data, holdings, and geographic allocations",
+      "real_time_quotes": "Yes - for all publicly traded instruments",
+      "historical_data": "Yes - financial statements, price history, and performance metrics"
+    },
+    "data_completeness": "High - all major portfolio instruments have sufficient data for dashboard analysis",
+    "recommended_api_endpoints": [
+      "/api/v3/etf-holdings/{SYMBOL} for ETF constituent analysis",
+      "/stable/funds/disclosure for mutual fund holdings",
+      "/api/v3/quote/{SYMBOL} for real-time pricing",
+      "/api/v3/profile/{SYMBOL} for comprehensive instrument profiles"
+    ]
+  }
+}

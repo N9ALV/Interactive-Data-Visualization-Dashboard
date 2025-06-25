@@ -1,0 +1,183 @@
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+    output = "/home/ubuntu/portfolio-dashboard/app/node_modules/.prisma/client"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model PortfolioInstrument {
+  id                String   @id @default(cuid())
+  ticker            String   @unique
+  fundName          String
+  category          String
+  underlyingAssets  String
+  expenseRatio      String?
+  aum               String?
+  yield             String?
+  inception         String?
+  keyCharacteristics Json
+  commonMetrics     Json
+  sleeve            String   // A, B, C, D, E
+  targetAllocation  Float    // Target percentage allocation
+  currentAllocation Float    @default(0)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  financialMetrics FinancialMetric[]
+  nlpAnalyses      NLPAnalysis[]
+
+  @@map("portfolio_instruments")
+}
+
+model FinancialMetric {
+  id           String   @id @default(cuid())
+  instrumentId String
+  instrument   PortfolioInstrument @relation(fields: [instrumentId], references: [id], onDelete: Cascade)
+  
+  date         DateTime
+  metricType   String   // revenue, ebitda, eps, roce, etc.
+  value        Float
+  period       String   // annual, quarterly, monthly
+  currency     String   @default("USD")
+  
+  // Additional context fields
+  metadata     Json?    // Store additional metric-specific data
+  
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("financial_metrics")
+  @@index([instrumentId, metricType, date])
+}
+
+model PortfolioAllocation {
+  id               String   @id @default(cuid())
+  name             String   @unique // "Current", "Target", "Scenario 1", etc.
+  isActive         Boolean  @default(false)
+  
+  // 5 sleeve allocations
+  sleeveA          Float    // Quality Dividend & Option Income (35%)
+  sleeveB          Float    // Fixed-Income & Inflation Hedge (20%)
+  sleeveC          Float    // Market-Neutral/Alt Alpha (25%)
+  sleeveD          Float    // Real-Asset Yield (10%)
+  sleeveE          Float    // Cash & Cash-Like (10%)
+  
+  forwardYield     Float?
+  maxDrawdown      Float?
+  dailyLiquidity   Float?
+  
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@map("portfolio_allocations")
+}
+
+model MarketData {
+  id           String   @id @default(cuid())
+  symbol       String
+  date         DateTime
+  
+  open         Float?
+  high         Float?
+  low          Float?
+  close        Float
+  volume       BigInt?
+  adjustedClose Float?
+  
+  // Additional market data
+  marketCap    BigInt?
+  beta         Float?
+  pe           Float?
+  
+  createdAt    DateTime @default(now())
+
+  @@map("market_data")
+  @@unique([symbol, date])
+  @@index([symbol, date(sort: Desc)])
+}
+
+model NLPAnalysis {
+  id           String   @id @default(cuid())
+  instrumentId String
+  instrument   PortfolioInstrument @relation(fields: [instrumentId], references: [id], onDelete: Cascade)
+  
+  documentType String   // "10-K", "10-Q", "earnings_call", etc.
+  analysisDate DateTime
+  
+  sentiment    Float    // -1 to 1 scale
+  themes       Json     // Key themes extracted
+  risks        Json     // Risk factors identified
+  opportunities Json    // Opportunities mentioned
+  forwardLookingStatements Json // Future outlook statements
+  
+  rawText      String?  // Original text analyzed
+  summary      String?  // AI-generated summary
+  
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("nlp_analyses")
+  @@index([instrumentId, analysisDate])
+}
+
+model UserSettings {
+  id                String   @id @default(cuid())
+  userId            String   @default("default") @unique
+  
+  // API Configuration
+  fmpApiKey         String?  // Financial Modeling Prep API key
+  refreshInterval   Int      @default(3600) // seconds
+  
+  // Dashboard Settings
+  defaultTimeframe  String   @default("1Y") // 1Y, 3Y, 5Y
+  theme             String   @default("dark")
+  enableNotifications Boolean @default(true)
+  
+  // Benchmark Settings
+  enableSP500       Boolean  @default(true)
+  enableBondBench   Boolean  @default(true)
+  customBenchmarks  Json?    // User-defined benchmarks
+  
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@map("user_settings")
+}
+
+model BenchmarkData {
+  id           String   @id @default(cuid())
+  benchmarkType String  // "SP500", "30_70_AGG_BOND", "CUSTOM"
+  symbol       String   // "^GSPC", etc.
+  date         DateTime
+  value        Float
+  
+  createdAt    DateTime @default(now())
+
+  @@map("benchmark_data")
+  @@unique([benchmarkType, date])
+  @@index([benchmarkType, date(sort: Desc)])
+}
+
+model StressTestScenario {
+  id           String   @id @default(cuid())
+  name         String   @unique // "2008 Crisis", "COVID-19", "Inflation Spike"
+  description  String
+  
+  // Scenario parameters
+  equityShock  Float    // Percentage change
+  bondShock    Float
+  realEstateShock Float
+  volatilityMultiplier Float
+  duration     Int      // Days
+  
+  isActive     Boolean  @default(true)
+  
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("stress_test_scenarios")
+}

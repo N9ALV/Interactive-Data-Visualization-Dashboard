@@ -1,0 +1,216 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 210 40% 8%; /* #1A202C - Dark Charcoal */
+    --foreground: 213 31% 91%; /* #E8E8E8 - Light text */
+    
+    --card: 217 33% 17%; /* #2D3748 - Medium Gray */
+    --card-foreground: 213 31% 91%;
+    
+    --popover: 217 33% 17%;
+    --popover-foreground: 213 31% 91%;
+    
+    --primary: 210 98% 48%; /* #3182CE - Bright Blue */
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 213 31% 91%;
+    
+    --muted: 215 28% 17%;
+    --muted-foreground: 217 10% 64%;
+    
+    --accent: 215 28% 17%;
+    --accent-foreground: 213 31% 91%;
+    
+    --destructive: 0 84% 60%; /* #E53E3E - Muted Red */
+    --destructive-foreground: 210 40% 98%;
+    
+    --success: 142 71% 45%; /* #38A169 - Muted Green */
+    --success-foreground: 210 40% 98%;
+    
+    --border: 217 33% 22%;
+    --input: 217 33% 17%;
+    --ring: 210 98% 48%;
+    
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-['Inter'];
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  .font-mono {
+    font-family: 'Roboto Mono', monospace;
+  }
+  
+  /* Custom scrollbar for dark theme */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-card/30;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+  
+  /* Glassmorphism effects */
+  .glass {
+    background: rgba(45, 55, 72, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .glass-light {
+    background: rgba(45, 55, 72, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Custom shadows for dark theme */
+  .shadow-dark {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .shadow-dark-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Animation for numbers counting up */
+  .number-animate {
+    font-variant-numeric: tabular-nums;
+  }
+  
+  /* Gradient text effects */
+  .gradient-text {
+    background: linear-gradient(135deg, #60B5FF, #3182CE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-text-success {
+    background: linear-gradient(135deg, #38A169, #48BB78);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-text-warning {
+    background: linear-gradient(135deg, #FF9149, #ED8936);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Hover glow effects */
+  .hover-glow {
+    transition: all 0.3s ease;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 20px rgba(96, 181, 255, 0.3);
+  }
+  
+  /* Custom chart container styles */
+  .chart-container {
+    background: rgba(45, 55, 72, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+  }
+  
+  /* Typography improvements */
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.025em;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom component styles */
+.sidebar-nav {
+  @apply space-y-1;
+}
+
+.sidebar-nav-item {
+  @apply flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200;
+  @apply text-muted-foreground hover:text-foreground hover:bg-accent/50;
+}
+
+.sidebar-nav-item.active {
+  @apply text-primary bg-primary/10 border border-primary/20;
+}
+
+.metric-card {
+  @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6;
+  @apply hover:bg-card/70 transition-all duration-300 hover:shadow-dark-lg;
+}
+
+.dashboard-grid {
+  @apply grid gap-6;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.chart-legend-item {
+  @apply flex items-center gap-2 text-sm;
+}
+
+/* Loading animations */
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.5s ease-in-out infinite;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background-size: 468px 100%;
+}
+
+/* Responsive chart heights */
+.chart-sm {
+  height: 200px;
+}
+
+.chart-md {
+  height: 300px;
+}
+
+.chart-lg {
+  height: 400px;
+}
+
+.chart-xl {
+  height: 500px;
+}
+
+/* Focus styles for accessibility */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
+}
